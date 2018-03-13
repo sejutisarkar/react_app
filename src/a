@@ -1,0 +1,131 @@
+<div className="ui bottom attached segment pushable">
+  <div className="ui visible inverted left vertical sidebar menu">
+    <a className="item">
+    <i className="home icon"></i>
+    Home
+    </a>
+    <a className="item">
+    <i className="block layout icon"></i>
+    Topics
+    </a>
+    <a className="item">
+    <i className="smile icon"></i>
+    About Us
+    </a>
+  </div>
+
+<div className="pusher">
+<div className="ui basic segment">
+<h3 className="ui header">TimeTable</h3>
+
+
+  <a className="ui card" href="#">
+  <div className="content">
+    <div className="header">Computer Science and Engineering</div>
+    <div className="meta">
+    <span className="category">Department</span>
+  </div>
+  <div className="description">
+    <p></p>
+  </div>
+</div>
+<div className="extra content">
+  <div className="right floated author">
+    <img className="ui avatar image" src={i1}/>
+  </div>
+</div>
+</a>
+
+
+
+<a className="ui card" href="#">
+<div className="content">
+  <div className="header">Information Technology</div>
+  <div className="meta">
+    <span className="category">Department</span>
+  </div>
+  <div className="description">
+    <p></p>
+  </div>
+</div>
+<div className="extra content">
+  <div className="right floated author">
+    <img className="ui avatar image" src={i1}/>
+  </div>
+</div>
+</a>
+
+
+
+
+<a className="ui card" href="#">
+<div className="content">
+  <div className="header">Computer Science and System</div>
+  <div className="meta">
+    <span className="category">Department</span>
+  </div>
+  <div className="description">
+    <p></p>
+  </div>
+</div>
+<div className="extra content">
+  <div className="right floated author">
+    <img className="ui avatar image" src={i1}/>
+  </div>
+</div>
+</a>
+
+<a className="ui card" href="#">
+<div className="content">
+  <div className="header">  Electrical Engineering</div>
+  <div className="meta">
+    <span className="category">Department</span>
+  </div>
+  <div className="description">
+    <p></p>
+  </div>
+</div>
+<div className="extra content">
+  <div className="right floated author">
+    <img className="ui avatar image" src={i1}/>
+  </div>
+</div>
+</a>
+
+<a className="ui card" href="#">
+<div className="content">
+  <div className="header">Mechanical Engineering</div>
+  <div className="meta">
+    <span className="category">Department</span>
+  </div>
+  <div className="description">
+    <p></p>
+  </div>
+</div>
+<div className="extra content">
+  <div className="right floated author">
+    <img className="ui avatar image" src={i1}/>
+  </div>
+</div>
+</a>
+
+<a className="ui card" href="#">
+<div className="content">
+  <div className="header">Civil Engineering</div>
+  <div className="meta">
+    <span className="category">Department</span>
+  </div>
+  <div className="description">
+    <p></p>
+  </div>
+</div>
+<div className="extra content">
+  <div className="right floated author">
+    <img className="ui avatar image" src={i1}/>
+  </div>
+</div>
+</a>
+
+</div>
+</div>
+</div>

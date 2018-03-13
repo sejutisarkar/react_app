@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+#main{
+  padding: 200px;
+
+}
+
+#btn1{
+  float: left;
+}
+#bodym{
+  padding-bottom: 10px;
+  margin:5px;
+}
+#nav{
+  
+}
