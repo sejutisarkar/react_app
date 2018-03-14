@@ -19,9 +19,7 @@ onBackClick = (e) =>{
     step : this.state.step - 1
   })
 };
-onPlusClick = (e)=>{
 
-}
 render(){
   switch (this.state.step) {
 			case 1:
@@ -35,6 +33,9 @@ render(){
       onBackClick={this.onBackClick} />
       case 4:
       return <Third onBackClick={this.onBackClick}/>
+      case 5:
+      return <Fourth onNextClick={this.onNextClick}
+    onBackClick={this.onBackClick} />
     }
   }
 }
@@ -100,10 +101,13 @@ class SubjectDashboard extends Component{
   handleNext = event => {
     this.props.onNextClick(event);
   };
+handleEditFormSubmit = (attrs) => {
+this.updateSubject(attrs);
+};
 handleCreateFormSubmit = (subject)=>{
   this.createSubject(subject);
 };
-  handleEditFormSubmit = (attrs) => {
+handleEditFormSubmit = (attrs) => {
 this.updateSubject(attrs);
 };
 handleTrashClick = (subjectid) =>{
@@ -147,10 +151,13 @@ updateSubject= (attrs) => {
       <div>
       <EditableSubjectList
       subjects={this.state.subjects}
-      onFormSubmit={this.handleEditFormSubmit}/>
+      onFormSubmit={this.handleEditFormSubmit}
+      onTrashClick={this.handleTrashClick}
+    />
+
       <ToggleSubectForm
       onFormSubmit={this.handleCreateFormSubmit}
-      onTrashClick={this.handleTrashClick}/>
+      />
       <button onClick={this.handleBack}>back</button>
       <button onClick={this.handleNext}>next</button>
       </div>
@@ -166,8 +173,10 @@ class EditableSubjectList extends Component{
       sub={subject.sub}
       time={subject.time}
       onFormSubmit={this.props.onFormSubmit}
-      onTrashClick={this.props.onTrashClick}
-     />
+      onEditClick={this.props.onEditClick}
+      onTrashClick={this.onTrashClick}
+      />
+
     ));
     return(
       <div>
@@ -290,11 +299,15 @@ class ToggleSubectForm extends React.Component{
       console.log("deleted");
       this.props.onTrashClick(this.props.id);
     };
+    handleEditClick = event => {
+   this.props.onEditClick(event);
+ }
     render(){
       return(
         <div>
-        <p>{this.props.subject}</p>
-        <button onClick={this.props.onEditClick}>Edit</button>
+        <p>{this.props.sub}</p>
+        <p>{this.props.time}</p>
+        <button onClick={this.handleEditClick}>Edit</button>
         <button onClick={this.handleTrashClick}>Delete</button>
         </div>
       );
@@ -304,13 +317,31 @@ class ToggleSubectForm extends React.Component{
     handleBack = event =>{
       this.props.onBackClick(event);
     };
+    handleNext = event => {
+      this.props.onNextClick(event);
+    };
     render(){
       return(
         <div>
         <p>no. of faculties</p>
         <input type='text' />
         <button onClick ={this.handleBack}>back</button>
+        <button onClick ={this.handleNext}>next</button>
         </div>
-      )
+      );
+    }
+  }
+  class Fourth extends Component{
+    handleBack = event =>{
+      this.props.onBackClick(event);
+    };
+    render(){
+      return(
+        <div>
+        <p>no. of rooms</p>
+        <input type='text' />
+        <button onClick ={this.handleBack}>back</button>
+        </div>
+      );
     }
   }
